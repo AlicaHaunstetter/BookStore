@@ -42,15 +42,7 @@ h1 {
   font-family: serif;
   font-size: 3rem;
   text-align: center;
-  padding-block: 2rem;
-
-  &:hover {
-    transform: scale(1.01);
-    transition:
-      transform 0.4s ease-out,
-      filter 0.4s ease-out;
-    filter: drop-shadow(0 0 40px rgba(188, 208, 213, 0.5));
-  }
+  padding-block: 4rem;
 }
 
 h2 {
@@ -64,10 +56,9 @@ h2 {
 
 h3 {
   margin: 0;
-  padding-top: 0.5rem;
-
+  padding-block: 0.5rem;
   color: var(--regentropfen);
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 1rem;
   text-align: center;
 }
@@ -76,17 +67,26 @@ h4 {
   margin: 0;
   padding-bottom: 0.5rem;
   color: var(--regennebel);
-  font-family: serif;
+  font-family: sans-serif;
   font-size: 1rem;
   text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 th {
   color: var(--regentropfen);
   font-family: serif;
   font-size: 0.75rem;
+  color: #496772;
   text-align: right;
   padding-right: 0.2rem;
+  line-height: 1;
+  font-family: sans-serif;
+  max-width: 4rem;
 }
 
 td {
@@ -94,13 +94,16 @@ td {
   font-family: serif;
   font-size: 0.75rem;
   text-align: left;
+  font-family: sans-serif;
+  max-width: 9rem;
 }
 
 main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .book_box {
@@ -133,29 +136,90 @@ main {
 
 .comment_scroll {
   max-height: 3rem;
+  overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--regennebel) var(--sturmnacht);
 }
 
-#comment-section {
+.comment_scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comment-section {
+  max-width: 13rem;
+  margin-top: 0.5rem;
+}
+
+.comment_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.comment_input {
+  width: 80%;
+  height: 1.25rem;
+  border: 2px solid #496772;
+  border-radius: 1rem;
+  background-color: #182933;
+  color: white;
+  font-size: 0.75rem;
+  font-family: sans-serif;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #bcd0d5;
+    opacity: 0.5;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    padding: 0.25rem;
+  }
+}
+
+.send_comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bcd0d5;
+  width: 20%;
+  height: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.send_comment img {
+  height: 1rem;
+  object-fit: contain;
+
+  &:active {
+    scale: 0.85;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 400px;
-  overflow-y: auto; /* < brauchst du für scrollen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182933;
+  height: 5rem;
 }
 
-#comment-section::-webkit-scrollbar {
-  width: 2px; /* Breite der Scrollbar */
-}
+footer a {
+  color: var(--regentropfen);
+  font-family: serif;
+  font-size: 1rem;
+  text-align: center;
 
-#comment-section::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Hintergrund der Spur */
-  border-radius: 10px;
-}
-
-#comment-section::-webkit-scrollbar-thumb {
-  background: #c0392b; /* Farbe des "Schiebereglers" */
-  border-radius: 10px;
-}
-
-#comment-section::-webkit-scrollbar-thumb:hover {
-  background: #e74c3c; /* Farbe beim Drüberfahren */
+  &:visited {
+    color: var(--regennebel);
+  }
 }
