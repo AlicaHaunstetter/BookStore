@@ -124,14 +124,6 @@ main {
 
 .image_container img {
   height: 15rem;
-
-  &:hover {
-    transform: scale(1.05);
-    transition:
-      transform 0.4s ease-out,
-      filter 0.4s ease-out;
-    filter: drop-shadow(0 0 40px rgba(188, 208, 213, 0.5));
-  }
 }
 
 .comment_scroll {
