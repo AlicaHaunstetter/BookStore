@@ -86,9 +86,9 @@ function getBookTemplate(index) {
             id="comment-input"
             class="comment_input"
           />
-          <button id="send-comment" class="send_comment">
-            <img src="./assets/icon/send2.svg" alt="send-button" />
-          </button>
+        <button id="send-comment" class="send_comment" onclick="sendComment()">
+          <img src="./assets/icon/send2.svg" alt="send-button" />
+        </button>
         </div>
       </div>
     </section>

@@ -9,3 +9,8 @@ function renderBooks() {
     content.innerHTML += getBookTemplate(i);
   }
 }
+
+function sendComment() {
+  let commentRef = document.getElementById("comment-input");
+  commentRef.push(commentRef) = commentRef.value
+}
