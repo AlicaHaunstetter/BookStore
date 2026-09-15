@@ -1,5 +1,6 @@
 let books = [
   {
+    isbn: 1000,
     name: "Harry Potter and the Chamber of Secrets",
     author: "J.K. Rowling",
     likes: 750,
@@ -21,6 +22,7 @@ let books = [
     ],
   },
   {
+    isbn: 1001,
     name: "Daisy – Und all deine Geheimnisse werden mir gehören",
     author: "Melanie Raabe",
     likes: 1250,
@@ -57,6 +59,7 @@ let books = [
     ],
   },
   {
+    isbn: 1002,
     name: "Dunkel",
     author: "Ragnar Jónasson",
     likes: 980,
@@ -67,6 +70,7 @@ let books = [
     comments: [],
   },
   {
+    isbn: 1003,
     name: "Eckstein – Die Kunst des Schiffbruchs",
     author: "Pascale Quiviger",
     likes: 1520,
@@ -103,6 +107,7 @@ let books = [
     ],
   },
   {
+    isbn: 1004,
     name: "The Adventures of Sherlock Holmes",
     author: "Sir Arthur Conan Doyle",
     likes: 1300,
@@ -113,6 +118,7 @@ let books = [
     comments: [],
   },
   {
+    isbn: 1005,
     name: "Twilight",
     author: "Stephenie Meyer",
     likes: 890,

@@ -1,28 +1,28 @@
 function getBookTemplate(index) {
   return `<section id="book-box" class="book_box">
-      <h2>Harry Potter and the Chamber of Secrets</h2>
-      <h4 id="price" class="price">19,99 €</h4>
+      <h2>${books[index].name}</h2>
+      <h4 id="price" class="price">${books[index].price.toFixed(2)} €</h4>
       <div id="image-container" class="image_container">
         <img
-          src="./assets/img/Harry-Potter-JK-Rowling.png"
-          alt="Harry Potter and the Chamber of Secrets by JK Rowling"
+          src="./assets/img/${books[index].isbn}.png"
+          alt="Buchcover von ${books[index].name}"
         />
       </div>
 
       <table id="book-details" class="book_details">
         <tr>
           <th>AUTHOR</th>
-          <td>J.K. Rowling</td>
+          <td>${books[index].author}</td>
         </tr>
 
         <tr>
           <th>YEAR</th>
-          <td>1998</td>
+          <td>${books[index].publishedYear}</td>
         </tr>
 
         <tr>
           <th>GENRE</th>
-          <td>Fantasy</td>
+          <td>${books[index].genre}</td>
         </tr>
       </table>
 
