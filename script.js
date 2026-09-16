@@ -17,11 +17,13 @@ function renderBooks() {
 
 function sendComment(bookindex) {
   let inputRef = document.getElementById(`comment-input-${bookindex}`);
-  if (inputRef.value != "") {
-    comments[bookindex].push(inputRef.value);
-    inputRef.value = "";
-    renderComments(bookindex);
-  }
+  let randomNumber = Math.floor(Math.random() * 1000);
+  comments[bookindex].unshift({
+    name: "Reader" + randomNumber,
+    text: inputRef.value,
+  });
+  inputRef.value = "";
+  renderComments(bookindex);
 }
 
 function renderComments(bookindex) {
@@ -33,9 +35,9 @@ function renderComments(bookindex) {
     commentindex++
   ) {
     content.innerHTML += `
-           <tr>
-              <th>Leser123</th>
-              <td>${comments[bookindex][commentindex]}</td>
-            </tr>`;
+      <tr>
+        <th>${comments[bookindex][commentindex].name}</th>
+        <td>${comments[bookindex][commentindex].text}</td>
+      </tr>`;
   }
 }
