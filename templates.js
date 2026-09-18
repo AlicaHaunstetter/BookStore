@@ -1,8 +1,17 @@
 function getBookTemplate(bookindex) {
   return `<section class="book_box">
-      <h2>${books[bookindex].name}</h2>
+      <h2>${books[bookindex].name}</h2> 
+          
       <h4 class="price">${books[bookindex].price.toFixed(2)} €</h4>
       <div class="image_container">
+        <button
+          class="like-button"
+          onclick="activateLike(${bookindex})">
+            <img
+              id="like-heart-${bookindex}"
+              src="./assets/icon/heart1.svg"
+              alt="Like Button inactive"/>
+        </button>
         <img
           src="./assets/img/${books[bookindex].isbn}.png"
           alt="Buchcover von ${books[bookindex].name}"

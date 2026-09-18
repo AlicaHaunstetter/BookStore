@@ -82,6 +82,30 @@ h3 {
   text-align: center;
 }
 
+button {
+  background-color: transparent;
+  border-style: none;
+}
+
+.like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background-color: #bcd0d5;
+  border-radius: 4rem;
+}
+
+.like-button img {
+  width: 60%;
+  height: 60%;
+  min-width: 0;
+  object-fit: contain;
+  background-color: transparent;
+}
+
 .price {
   margin: 0;
   padding-bottom: 0.5rem;
@@ -146,8 +170,19 @@ main {
   padding: 20px;
 }
 
+.image_container {
+  position: relative;
+}
+
 .image_container img {
   height: 15rem;
+}
+
+.image_container button {
+  position: absolute;
+  top: -0.5rem;
+  right: 2rem;
+  z-index: 1;
 }
 
 .comment_scroll {
