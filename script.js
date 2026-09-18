@@ -71,12 +71,17 @@ let liked = false;
 
 function activateLike(bookindex) {
   let heart = document.getElementById(`like-heart-${bookindex}`);
+  let count = document.getElementById(`like-count-${bookindex}`);
 
   if (books[bookindex].liked == false) {
     heart.src = "./assets/icon/heart2.svg";
     books[bookindex].liked = true;
+    books[bookindex].likes++;
   } else {
     heart.src = "./assets/icon/heart1.svg";
     books[bookindex].liked = false;
+    books[bookindex].likes--;
   }
+
+  count.innerHTML = books[bookindex].likes;
 }

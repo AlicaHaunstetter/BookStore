@@ -12,6 +12,7 @@ function getBookTemplate(bookindex) {
               src="./assets/icon/heart1.svg"
               alt="Like Button inactive"/>
         </button>
+        <p id="like-count-${bookindex}" class="like-count">${books[bookindex].likes}</p>
         <img
           src="./assets/img/${books[bookindex].isbn}.png"
           alt="Buchcover von ${books[bookindex].name}"
