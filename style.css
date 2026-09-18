@@ -3,8 +3,8 @@
   --oxblood: #4a1723;
   --mulberry: #7b3b50;
   --schiefer: #304753;
-  --regennebel: #496772;
-  --regentropfen: #bcd0d5;
+  --regennebel: #8aa9b3;
+  --regentropfen: #dcf8ff;
 }
 
 body {
@@ -31,12 +31,22 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 973px) {
+    justify-content: center;
+  }
 }
 
 .Header_Logo img {
-  width: 7rem;
-  height: 7rem;
-  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 2rem;
+
+  @media (max-width: 973px) {
+    width: 7rem;
+    height: 7rem;
+    margin: 1rem;
+  }
 }
 
 h1 {
@@ -46,6 +56,12 @@ h1 {
   font-size: 3rem;
   text-align: center;
   padding-block: 4rem;
+  padding-inline: 2rem;
+
+  @media (max-width: 400px) {
+    font-size: 2rem;
+    padding-inline: 1rem;
+  }
 }
 
 h2 {
@@ -66,7 +82,7 @@ h3 {
   text-align: center;
 }
 
-h4 {
+.price {
   margin: 0;
   padding-bottom: 0.5rem;
   color: var(--regennebel);
@@ -84,7 +100,7 @@ th {
   color: var(--regentropfen);
   font-family: serif;
   font-size: 0.75rem;
-  color: #496772;
+  color: var(--regennebel);
   text-align: right;
   padding-right: 0.2rem;
   line-height: 1;
@@ -104,10 +120,14 @@ td {
 main {
   flex-grow: 1;
   display: flex;
+  margin-inline: auto;
+  max-width: 1440px;
   justify-content: center;
   align-items: center;
+  align-content: start;
   gap: 2rem;
   flex-wrap: wrap;
+  padding-inline: 2rem;
 }
 
 .book_box {
@@ -164,17 +184,15 @@ main {
   color: white;
   font-size: 0.75rem;
   font-family: sans-serif;
+  padding-inline: 0.75rem;
 
   &:focus-visible {
-    outline: none;
+    outline: 2px solid transparent;
   }
 
   &::placeholder {
     color: #bcd0d5;
-    opacity: 0.5;
-    font-size: 0.75rem;
-    font-family: sans-serif;
-    padding: 0.25rem;
+    opacity: 0.8;
   }
 }
 

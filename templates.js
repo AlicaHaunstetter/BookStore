@@ -1,15 +1,15 @@
 function getBookTemplate(bookindex) {
-  return `<section id="book-box" class="book_box">
+  return `<section class="book_box">
       <h2>${books[bookindex].name}</h2>
-      <h4 id="price" class="price">${books[bookindex].price.toFixed(2)} €</h4>
-      <div id="image-container" class="image_container">
+      <h4 class="price">${books[bookindex].price.toFixed(2)} €</h4>
+      <div class="image_container">
         <img
           src="./assets/img/${books[bookindex].isbn}.png"
           alt="Buchcover von ${books[bookindex].name}"
         />
       </div>
 
-      <table id="book-details" class="book_details">
+      <table class="book_details">
         <tr>
           <th>AUTHOR</th>
           <td>${books[bookindex].author}</td>
@@ -29,7 +29,7 @@ function getBookTemplate(bookindex) {
       <div class="comment-section">
         <h3>Comments</h3>
 
-        <div class="comment_scroll">
+        <div class="comment_scroll" tabindex="0" aria-label="Comments on the book ${books[bookindex].name}">
           <table id="comment-table-${bookindex}" class="comment_table">
           </table>
         </div>
@@ -37,12 +37,13 @@ function getBookTemplate(bookindex) {
           <input
             type="text"
             placeholder="write a comment"
+            aria-label="Write a comment on ${books[bookindex].name}"
             name="CommentInput"
             id="comment-input-${bookindex}"
             class="comment_input"
           />
         <button id="send-comment-${bookindex}" class="send_comment" onclick="sendComment(${bookindex})">
-          <img src="./assets/icon/send2.svg" alt="send-button" />
+          <img src="./assets/icon/send2.svg" alt="send comment" />
         </button>
         </div>
       </div>
