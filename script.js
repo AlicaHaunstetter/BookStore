@@ -1,10 +1,16 @@
 let comments = [];
 
 function init() {
-  for (let bookindex = 0; bookindex < books.length; bookindex++) {
-    comments[bookindex] = [];
-  }
+  initComments();
+  getFromLocalStorage();
   renderBooks();
+  renderAllComments();
+}
+
+function initComments() {
+  for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
+    comments[bookIndex] = [];
+  }
 }
 
 function renderBooks() {
@@ -23,6 +29,7 @@ function sendComment(bookindex) {
     text: inputRef.value,
   });
   inputRef.value = "";
+  saveToLocalStorage();
   renderComments(bookindex);
 }
 
@@ -39,5 +46,23 @@ function renderComments(bookindex) {
         <th>${comments[bookindex][commentindex].name}</th>
         <td>${comments[bookindex][commentindex].text}</td>
       </tr>`;
+  }
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("comments", JSON.stringify(comments));
+}
+
+function getFromLocalStorage() {
+  let allComments = JSON.parse(localStorage.getItem("comments"));
+  if (!allComments) return;
+  for (let bookindex = 0; bookindex < books.length; bookindex++) {
+    comments[bookindex] = allComments[bookindex] || [];
+  }
+}
+
+function renderAllComments() {
+  for (let bookindex = 0; bookindex < books.length; bookindex++) {
+    renderComments(bookindex);
   }
 }
