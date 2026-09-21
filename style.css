@@ -170,7 +170,6 @@ main {
   align-content: start;
   gap: 2rem;
   flex-wrap: wrap;
-  padding-inline: 2rem;
 }
 
 .book_box {

@@ -1,9 +1,11 @@
 let comments = [];
+let liked = false;
 
 function init() {
   initComments();
   getFromLocalStorage();
   renderBooks();
+  renderLikes();
   renderAllComments();
 }
 
@@ -18,6 +20,15 @@ function renderBooks() {
   content.innerHTML = "";
   for (let bookindex = 0; bookindex < books.length; bookindex++) {
     content.innerHTML += getBookTemplate(bookindex);
+  }
+}
+
+function renderLikes() {
+  for (let bookindex = 0; bookindex < books.length; bookindex++) {
+    if (books[bookindex].liked) {
+      document.getElementById(`like-heart-${bookindex}`).src =
+        "./assets/icon/heart2.svg";
+    }
   }
 }
 
@@ -66,8 +77,6 @@ function renderAllComments() {
     renderComments(bookindex);
   }
 }
-
-let liked = false;
 
 function activateLike(bookindex) {
   let heart = document.getElementById(`like-heart-${bookindex}`);
