@@ -8,18 +8,7 @@ let books = [
     price: 18.0,
     publishedYear: 1998,
     genre: "Fantasy",
-    comments: [
-      {
-        name: "BuchKenner",
-        comment:
-          "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat.",
-      },
-      {
-        name: "LeseWurm",
-        comment:
-          "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben.",
-      },
-    ],
+    comments: [],
   },
   {
     isbn: 1001,
@@ -30,33 +19,7 @@ let books = [
     price: 19.99,
     publishedYear: 2026,
     genre: "Thriller",
-    comments: [
-      {
-        name: "Leser123",
-        comment:
-          "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
-      },
-      {
-        name: "Bookworm84",
-        comment:
-          "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
-      },
-      {
-        name: "FantasyFanatic",
-        comment:
-          "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
-      },
-      {
-        name: "SciFiGuru",
-        comment:
-          "Ein cleverer Science-Fiction-Roman mit interessanten Zeitreise-Konzepten und Charakteren.",
-      },
-      {
-        name: "NovelLover",
-        comment:
-          "Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat.",
-      },
-    ],
+    comments: [],
   },
   {
     isbn: 1002,
@@ -78,33 +41,7 @@ let books = [
     price: 22.95,
     publishedYear: 2022,
     genre: "Fantasy",
-    comments: [
-      {
-        name: "LeserPeter",
-        comment:
-          "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt.",
-      },
-      {
-        name: "BookLover21",
-        comment:
-          "Ein romantisches Meisterwerk, das mich tief berührt und bewegt hat.",
-      },
-      {
-        name: "FantasyNerd",
-        comment:
-          "Fantastische Welten und epische Abenteuer - genau mein Geschmack!",
-      },
-      {
-        name: "SciFiEnthusiast",
-        comment:
-          "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
-      },
-      {
-        name: "ReadingAddict",
-        comment:
-          "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
-      },
-    ],
+    comments: [],
   },
   {
     isbn: 1004,
@@ -126,17 +63,6 @@ let books = [
     price: 12.3,
     publishedYear: 2005,
     genre: "Romantik",
-    comments: [
-      {
-        name: "BücherLiebhaber",
-        comment:
-          "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd.",
-      },
-      {
-        name: "Leseratte",
-        comment:
-          "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat.",
-      },
-    ],
+    comments: [],
   },
 ];
